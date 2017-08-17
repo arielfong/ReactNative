@@ -10,6 +10,8 @@ import {
     View,
     } from 'react-native';
 
+import Button from 'react-native-button';
+
 var MOCKED_MOVIES_DATA = [
     {title: 'Title', year: '2017', posters: {thumbnail:
 'http://i.imgur.com/UePbdph.jpg'}},
@@ -63,33 +65,48 @@ export default class App extends React.Component {
             </View>
         );
     }
-    renderMovie(movie) {
-        return (
+        renderMovie(movie) {
+             return (
+
+            
+
           <View style={styles.container}>
-            <Image 
+           <Image 
                 source={{uri: movie.posters.thumbnail}}
                 style={styles.thumbnail}
             />
+          
             <View style={styles.rightContainer}>
                 <Text style={styles.title}>{movie.title}</Text>
                 <Text style={styles.year}>{movie.year}</Text>
             </View>
+
+
+          
+           
+
+
+            
+
       </View>
     );
   }
 }
 
 var styles = StyleSheet.create({
-  container: {
+    container: {
       flex: 1,
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: '#F5FCFF',
   },
-  rightContainer: {
-      flex: 1,
+      rightContainer: {
+          flex: 1,
       //backgroundColor: '#006FA3',
+  },
+  leftContainer: {
+      flex: 1,
   },
   thumbnail: {
       width: 53,
